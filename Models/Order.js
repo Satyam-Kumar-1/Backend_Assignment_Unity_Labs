@@ -3,19 +3,19 @@ const mongoose = require('mongoose');
 const orderSchema = new mongoose.Schema({
     buyerId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Buyer', // Reference to the Buyer model
+        ref: 'Buyer', 
         required: true,
     },
     sellerId: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Seller', // Reference to the Seller model
+        ref: 'Seller', 
         required: true,
     },
     items: [
         {
             item: {
                 type: mongoose.Schema.Types.ObjectId,
-                ref: 'Item', // Reference to the Item model
+                ref: 'Item', 
                 required: true,
             },
             quantity: {
@@ -24,7 +24,7 @@ const orderSchema = new mongoose.Schema({
             },
         },
     ],
-    // Other order-specific fields
+    
 });
 
 module.exports = mongoose.model('Order', orderSchema);

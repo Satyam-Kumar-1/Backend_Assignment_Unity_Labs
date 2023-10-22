@@ -1,4 +1,4 @@
-// models/Seller.js
+
 const mongoose = require('mongoose');
 
 const sellerSchema = new mongoose.Schema({
@@ -7,7 +7,7 @@ const sellerSchema = new mongoose.Schema({
         ref: 'user',
         required: true,
     },
-    // Add seller-specific fields here
+    
 });
 
 module.exports = mongoose.model('Seller', sellerSchema);

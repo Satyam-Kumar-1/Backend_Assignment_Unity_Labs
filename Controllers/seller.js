@@ -1,6 +1,8 @@
 const Catalog = require('../Models/Catalog');
 const Item = require('../Models/Item');
 const Order = require('../Models/Order');
+
+
 // Create a catalog for a seller
 const createCatalog = async (req, res) => {
     try {
@@ -19,7 +21,7 @@ const createCatalog = async (req, res) => {
                 itemIds.push(item._id);
             }
 
-            // Update the catalog with the additional item references
+           
             await Catalog.findByIdAndUpdate(existingCatalog._id, { items: itemIds });
 
             return res.status(200).json({ message: 'Items added to the catalog' });

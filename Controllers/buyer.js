@@ -33,10 +33,10 @@ const getSellerCatalog = async (req, res) => {
 const createOrder = async (req, res) => {
     try {
         const { sellerId } = req.params;
-        const { items, buyerId } = req.body; // Ensure you provide the buyer's user ID in the request
+        const { items, buyerId } = req.body; 
 
         const order = new Order({
-            buyerId, // Use the correct field name "buyerId"
+            buyerId, 
             sellerId,
             items,
         });

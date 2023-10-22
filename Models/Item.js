@@ -7,14 +7,14 @@ const itemSchema = new mongoose.Schema({
     },
     seller: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Seller', // Reference to the Seller model
+        ref: 'Seller', 
         required: true,
     },
     price: {
         type: Number,
         required: true,
     },
-    // Other item-specific fields
+
 });
 
 module.exports = mongoose.model('Item', itemSchema);
